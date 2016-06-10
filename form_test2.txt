@@ -4,7 +4,7 @@
 <body>  
 
 <?php
-$name = $email = $gender = $comment = $website = $marital status "";
+$name = $email = $gender = $comment = $website = $maritalstatus = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $website = test_input($_POST["website"]);
   $comment = test_input($_POST["comment"]);
   $gender = test_input($_POST["gender"]);
-  $marital stauts = test_input($_POST["marital status"]);
+  $maritalstatus = test_input($_POST["maritalstatus"]);
 }
 
 function test_input($data) {
@@ -39,9 +39,9 @@ function test_input($data) {
   <input type="radio" name="gender" value="homo">Homo
   <br><br><br>
   Marital-Satus:
-  <input type="radio" name="marital status" value="married">Married
-  <input type="radio" name="marital status" value="divorced">Divorced
-  <input type="radio" name="marital status" value="single'>Single
+  <input type="radio" name="maritalstatus" value="married">Married
+  <input type="radio" name="maritalstatus" value="divorced">Divorced
+  <input type="radio" name="maritalstatus" value="single'>Single
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -58,7 +58,7 @@ echo $comment;
 echo "<br>";
 echo $gender;
 echo "<br>";
-echo $marital status;
+echo $maritalstatus;
 echo "<br>";
 ?>
 
